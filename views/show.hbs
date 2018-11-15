@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href = "/css/styles.css" type = "text/css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <div id = "post" class = "card text-center bg-light mb-3 border-light mb-3">
+      <form action = "/posts">
+        <button class = "button btn btn-primary" type = "submit">
+          <i class = "fas fa-home"></i>
+        </button>
+      </form>
+      <img src = "/images/{{image}}" />
+      <h1>{{title}}</h1>
+      <p>{{post}}</p>
+      <form action = "/posts/{{id}}/edit">
+        <button class = "button btn btn-primary" type = "submit">
+          <i class = "far fa-edit"></i>
+        </button>
+      </form>
+      <form action = "/posts/{{id}}?_method=DELETE" method = "post">
+        <button class = "button btn btn-primary" type = "submit">
+          <i class = "far fa-trash-alt"></i>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
